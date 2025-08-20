@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.listCashierQueue = new System.Windows.Forms.ListView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnRefresh
@@ -67,6 +69,10 @@
             this.listCashierQueue.UseCompatibleStateImageBehavior = false;
             this.listCashierQueue.SelectedIndexChanged += new System.EventHandler(this.listCashierQueue_SelectedIndexChanged);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // CashierWindowQueue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,5 +94,6 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ListView listCashierQueue;
+        private System.Windows.Forms.Timer timer1;
     }
 }
