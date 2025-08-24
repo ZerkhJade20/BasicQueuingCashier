@@ -53,6 +53,12 @@
     <Compile Include="CashierWindowQueueForm.Designer.cs">
       <DependentUpon>CashierWindowQueueForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewServing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewServing.Designer.cs">
+      <DependentUpon>ViewServing.cs</DependentUpon>
+    </Compile>
     <Compile Include="QueingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CashierWindowQueueForm.resx">
       <DependentUpon>CashierWindowQueueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewServing.resx">
+      <DependentUpon>ViewServing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -13,7 +13,7 @@ namespace BasicQueuingCashier
 {
     public partial class CashierWindowQueue : Form
     {
-
+        ViewServing view = new ViewServing();
         public CashierWindowQueue()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace BasicQueuingCashier
             timer.Interval = (1 * 1000); // 1 sec.
 timer.Tick += new EventHandler(timer1_Tick); //timer1_tick represents the name of Tick Event
             timer.Start();
-
+            view.Show();
 
         }
 
@@ -44,6 +44,11 @@ timer.Tick += new EventHandler(timer1_Tick); //timer1_tick represents the name o
             {
                 string next = CashierClass.CashierQueue.Dequeue();
                 DisplayCashierQueue (CashierClass.CashierQueue);
+                view.NowServing(next);
+            }
+            else
+            {
+                MessageBox.Show("No Customer.");
             }
                 
         }
